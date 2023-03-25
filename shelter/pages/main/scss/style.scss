@@ -139,7 +139,7 @@ body {
   &:hover {
     background-color: #FDDCC4;
     cursor: pointer;
-    transition: 300ms;
+    transition: 400ms;
   }
 }
 
@@ -239,6 +239,15 @@ body {
   height: 52px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+
+  &:hover {
+    background-color: #FDDCC4;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #F1CDB3;
+  }
 }
 
 .button-empty {
@@ -268,6 +277,18 @@ body {
   height: 435px;
   background: #FAFAFA;
   border-radius: 9px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    transition: 400ms;
+
+    .cards-item__button {
+      background-color: #F1CDB3;
+      transition: 400ms;
+      cursor: pointer;
+    }
+  }
 
   &__name {
     font-family: 'Georgia';

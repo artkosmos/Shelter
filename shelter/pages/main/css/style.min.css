@@ -129,7 +129,7 @@ body {
 .button-colored:hover {
   background-color: #FDDCC4;
   cursor: pointer;
-  transition: 300ms;
+  transition: 400ms;
 }
 
 .about {
@@ -219,6 +219,13 @@ body {
   border: 2px solid #F1CDB3;
   border-radius: 100px;
 }
+.arrow:hover {
+  background-color: #FDDCC4;
+  cursor: pointer;
+}
+.arrow:active {
+  background-color: #F1CDB3;
+}
 
 .button-empty {
   display: flex;
@@ -247,6 +254,16 @@ body {
   height: 435px;
   background: #FAFAFA;
   border-radius: 9px;
+}
+.cards-item:hover {
+  cursor: pointer;
+  background-color: #FFFFFF;
+  transition: 400ms;
+}
+.cards-item:hover .cards-item__button {
+  background-color: #F1CDB3;
+  transition: 400ms;
+  cursor: pointer;
 }
 .cards-item__name {
   font-family: "Georgia";
