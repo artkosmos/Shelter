@@ -67,17 +67,19 @@ body {
       margin-right: 1px; // pixel perfect
       color: #FAFAFA;
       border-bottom: 3px solid #F1CDB3;
+      pointer-events: none;
+      cursor: default;
     }
 
     &:hover {
       cursor: pointer;
       color: #FAFAFA;
-      transition: 300ms;
+      transition: 400ms;
     }
 
     &:active {
       border-bottom: 3px solid #F1CDB3;
-      transition: 200ms;
+      transition: 300ms;
     }
   }
 }
@@ -122,7 +124,7 @@ body {
 .button-colored {
   width: 207px;
   height: 52px;
-  background: #f1cdb3e8;
+  background: #F1CDB3;
   border-radius: 100px;
   border-style: none;
   font-family: 'Georgia';
@@ -386,7 +388,7 @@ body {
     margin: 0;
   }
 
-  &__info {
+  &__description {
     font-family: 'Arial';
     font-style: italic;
     font-weight: 400;
@@ -394,13 +396,16 @@ body {
     line-height: 150%;
     color: #B2B2B2;
   }
+
+  &__link {
+    width: 349px;
+    height: 43px;
+    background: #f1cdb3e8;
+    border-radius: 9px;
+  }
 }
 
 .donation-link {
-  width: 349px;
-  height: 43px;
-  background: #f1cdb3e8;
-  border-radius: 9px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -411,7 +416,7 @@ body {
     background: #FDDCC4;
   }
 
-  &__number {
+  &__text {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -424,4 +429,51 @@ body {
 
 .footer {
   height: 350px;
+
+  &-content {
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__img {
+      align-self: flex-end;
+    }
+
+    &__adress {
+      margin-right: 9px;
+    }
+  }
+}
+
+.info-block {
+  height: 234px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  &__title {
+    color: #FFFFFF;
+  }
+}
+
+.link-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+
+  &:hover {
+    color: #FFFFFF;
+    transition: 400ms;
+  }
 }

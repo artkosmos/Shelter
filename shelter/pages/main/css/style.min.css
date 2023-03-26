@@ -65,15 +65,17 @@ body {
   margin-right: 1px;
   color: #FAFAFA;
   border-bottom: 3px solid #F1CDB3;
+  pointer-events: none;
+  cursor: default;
 }
 .menu__item:hover {
   cursor: pointer;
   color: #FAFAFA;
-  transition: 300ms;
+  transition: 400ms;
 }
 .menu__item:active {
   border-bottom: 3px solid #F1CDB3;
-  transition: 200ms;
+  transition: 300ms;
 }
 
 .not-only-content {
@@ -112,7 +114,7 @@ body {
 .button-colored {
   width: 207px;
   height: 52px;
-  background: rgba(241, 205, 179, 0.9098039216);
+  background: #F1CDB3;
   border-radius: 100px;
   border-style: none;
   font-family: "Georgia";
@@ -355,7 +357,7 @@ body {
   color: #545454;
   margin: 0;
 }
-.donation-block__info {
+.donation-block__description {
   font-family: "Arial";
   font-style: italic;
   font-weight: 400;
@@ -363,12 +365,14 @@ body {
   line-height: 150%;
   color: #B2B2B2;
 }
-
-.donation-link {
+.donation-block__link {
   width: 349px;
   height: 43px;
   background: rgba(241, 205, 179, 0.9098039216);
   border-radius: 9px;
+}
+
+.donation-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -378,7 +382,7 @@ body {
 .donation-link:hover {
   background: #FDDCC4;
 }
-.donation-link__number {
+.donation-link__text {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -390,4 +394,46 @@ body {
 
 .footer {
   height: 350px;
+}
+.footer-content {
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-content__img {
+  align-self: flex-end;
+}
+.footer-content__adress {
+  margin-right: 9px;
+}
+
+.info-block {
+  height: 234px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.info-block__title {
+  color: #FFFFFF;
+}
+
+.link-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+}
+.link-block:hover {
+  color: #FFFFFF;
+  transition: 400ms;
 }/*# sourceMappingURL=style.min.css.map */
