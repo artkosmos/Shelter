@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 
   &__title {
     font-family: 'Georgia';
@@ -122,6 +123,9 @@ body {
 }
 
 .button-colored {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 207px;
   height: 52px;
   background: #F1CDB3;
@@ -134,10 +138,10 @@ body {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
+  text-decoration: none;
 
   &:hover {
     background-color: #FDDCC4;
-    cursor: pointer;
     transition: 400ms;
   }
 }
@@ -185,6 +189,7 @@ body {
 }
 
 .h3-title {
+  height: 90px;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -336,7 +341,7 @@ body {
   height: 113px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 30px;
 

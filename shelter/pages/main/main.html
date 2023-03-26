@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" href="../../assets/icons/favicon.png" type="image/png">
   <link rel="stylesheet" href="./css/fonts.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
   <title>Cozy House</title>
@@ -17,15 +18,15 @@
   <header class="header">
     <div class="container">
       <div class="header-content">
-        <div class="header-content__titleblock title-block">
+        <a href="#" class="header-content__titleblock title-block">
           <h1 class="title-block__title">Cozy House</h1>
           <div class="title-block__subtitle">Shelter for pets in Boston</div>
-        </div>
+        </a>
         <nav class="header-content__menu menu">
           <a href="#" class="menu__item menu__item_active">About the shelter</a>
-          <a href="#" class="menu__item">Our pets</a>
-          <a href="#" class="menu__item">Help the shelter</a>
-          <a href="#" class="menu__item">Contacts</a>
+          <a href="../our-pets/pets.html" target="_blank" class="menu__item">Our pets</a>
+          <a href="#help-section" class="menu__item">Help the shelter</a>
+          <a href="#contacts" class="menu__item">Contacts</a>
         </nav>
       </div>
     </div>
@@ -39,7 +40,7 @@
           <div class="not-only-content__text">We offer to give a chance to a little and nice puppy with an extremely
             wide and
             open heart. He or she will love you more than anybody else in the world, you will see!</div>
-          <button class="not-only-content__button button-colored">Make a friend</button>
+          <a href="#friends-section" class="not-only-content__button button-colored">Make a friend</a>
         </div>
         <img src="../../assets/img/start-screen-dog.png" alt="dog" class="not-only-content__image">
       </div>
@@ -67,7 +68,7 @@
     </div>
   </section>
 
-  <section class="friends">
+  <section class="friends" id="friends-section">
     <div class="container">
       <div class="friends-content">
         <h3 class="friends-content__title h3-title">Our friends who<br>
@@ -97,15 +98,18 @@
             <img src="../../assets/icons/arrow-right.png" alt="arrow right">
           </div>
         </div>
-        <button class="friends-content__button button-colored">Get to know the rest</button>
+        <form action="../our-pets/pets.html" target="_blank">
+          <a href="../our-pets/pets.html" class="friends-content__button button-colored" target="_blank">Get to know the
+            rest</a>
+        </form>
       </div>
     </div>
   </section>
 
-  <section class="help">
+  <section class="help" id="help-section">
     <div class="container">
       <div class="help-content">
-        <div class="help-content__title h3-title">How you can help<br>our shelter</div>
+        <h3 class="help-content__title h3-title">How you can help<br>our shelter</h3>
         <div class="help-content__row">
           <div class="help-content__item help-item">
             <img class="help-item__icon" src="../../assets/icons/food_icon.png" alt="food">
@@ -153,9 +157,9 @@
       <div class="in-addition-content">
         <img class="in-addition-content__img" src="../../assets/img/donation-dog.png" alt="dog">
         <div class="in-addition-content__donation donation-block">
-          <div class="donation-block__title h3-title">You can also<br>make a donation</div>
+          <h3 class="donation-block__title h3-title">You can also<br>make a donation</h3>
           <h5 class="donation-block__subtitle">Name of the bank / Type of bank account</h5>
-          <a class="donation-block__link donation-link" href="##">
+          <a class="donation-block__link donation-link" href="#" onclick="return false">
             <img class="donation-link__img" src="../../assets/icons/credit-card_icon.svg" alt="brown dog">
             <span class="donation-link__text">8380 2880 8028 8791 7435</span>
           </a>
@@ -169,36 +173,33 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="container">
       <div class="footer-content">
-
         <div class="footer-content__questions info-block">
-          <div class="info-block__title h3-title">For questions<br>and suggestions</div>
-          <a href="##" class="info-block__mail link-block">
+          <h3 class="info-block__title h3-title">For questions<br>and suggestions</h3>
+          <a href="mailto:email@shelter.com" target="_blank" class="info-block__mail link-block">
             <img class="link-block__img" src="../../assets/icons/mail_icon.png" alt="letter">
             <span class="link-block__text">email@shelter.com</span>
           </a>
-          <a href="##" class="info-block__phone link-block">
+          <a href="tel:+136745677554" class="info-block__phone link-block">
             <img class="link-block__img" src="../../assets/icons/phone_icon.png" alt="phone">
             <span class="link-block__text">+13 674 567 75 54</span>
           </a>
         </div>
 
         <div class="footer-content__adress info-block">
-          <div class="info-block__title h3-title">We are waiting<br>for your visit</div>
-          <a href="##" class="info-block__location link-block">
+          <h3 class="info-block__title h3-title">We are waiting<br>for your visit</h3>
+          <a href="https://goo.gl/maps/NUkoEnpmDsk53HTg8" target="_blank" class="info-block__location link-block">
             <img class="link-block__img" src="../../assets/icons/pin_location_icon.png" alt="pin">
             <span class="link-block__text">1 Central Street, Boston<br>(entrance from the store)</span>
           </a>
-          <a href="##" class="info-block__location link-block">
+          <a href="https://goo.gl/maps/oTfRx6Gbkg4ZvKjeA" target="_blank" class="info-block__location link-block">
             <img class="link-block__img" src="../../assets/icons/pin_location_icon.png" alt="pin">
             <span class="link-block__text">18 South Park, London </span>
           </a>
         </div>
-
         <img class="footer-content__img" src="../../assets/img/footer-puppy.png" alt="dog">
-
       </div>
     </div>
   </footer>
