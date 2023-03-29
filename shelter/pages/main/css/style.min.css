@@ -80,7 +80,7 @@ body {
 }
 .menu__item:active {
   border-bottom: 3px solid #F1CDB3;
-  transition: 300ms;
+  transition: 150ms;
 }
 
 .not-only-content {
@@ -268,6 +268,7 @@ body {
   cursor: pointer;
   background-color: #FFFFFF;
   transition: 400ms;
+  box-shadow: 0px 0px 30px 10px rgba(34, 60, 80, 0.2);
 }
 .cards-item:hover .cards-item__button {
   background-color: #F1CDB3;
