@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -21,6 +21,12 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 60px;
+}
+@media screen and (max-width: 768px) {
+  .header-content {
+    padding: 0 30px;
+    gap: 81px;
+  }
 }
 
 .title-block {
@@ -82,9 +88,14 @@ body {
   border-bottom: 3px solid #F1CDB3;
   transition: 150ms;
 }
+@media screen and (max-width: 768px) {
+  .menu {
+    margin: 0;
+  }
+}
 
 .not-only-content {
-  height: 818px;
+  min-height: 818px;
   display: flex;
   justify-content: space-between;
 }
@@ -115,6 +126,24 @@ body {
 .not-only-content__image {
   align-self: flex-end;
 }
+@media screen and (max-width: 768px) {
+  .not-only-content {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center;
+    padding: 0 30px;
+  }
+  .not-only-content__description {
+    margin-top: 60px;
+  }
+  .not-only-content__button {
+    align-self: center;
+  }
+  .not-only-content__image {
+    width: 80%;
+  }
+}
 
 .button-colored {
   display: flex;
@@ -141,7 +170,7 @@ body {
 
 .about {
   background-color: #FFFFFF;
-  height: 588px;
+  min-height: 588px;
 }
 .about-content {
   padding: 80px 0 100px 0;
@@ -174,6 +203,18 @@ body {
   font-size: 15px;
   line-height: 160%;
   color: #4C4C4C;
+}
+@media screen and (max-width: 768px) {
+  .about-content {
+    padding: 80px 30px 100px 30px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 80px;
+  }
+  .about-content__image {
+    width: 43%;
+    height: 100%;
+  }
 }
 
 .h3-title {
@@ -217,6 +258,11 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 90px;
+}
+@media screen and (max-width: 768px) {
+  .slider__cards {
+    flex-direction: column;
+  }
 }
 
 .arrow {
@@ -344,6 +390,11 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .in-addition-content {
+    flex-direction: column;
+  }
 }
 .in-addition-content__img {
   width: 505px;

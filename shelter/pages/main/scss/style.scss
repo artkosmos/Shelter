@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -21,6 +21,11 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 60px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 30px;
+    gap: 81px;
+  }
 }
 
 .title-block {
@@ -56,7 +61,7 @@ body {
 .menu {
   display: flex;
   gap: 35px;
-  margin-right: 2px;
+  margin-right: 2px; //pixel perfect
 
   &__item {
     font-family: 'Arial';
@@ -87,10 +92,14 @@ body {
       transition: 150ms;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
 }
 
 .not-only-content {
-  height: 818px;
+  min-height: 818px;
   display: flex;
   justify-content: space-between;
 
@@ -124,6 +133,26 @@ body {
   &__image {
     align-self: flex-end;
   }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center;
+    padding: 0 30px;
+
+    &__description {
+      margin-top: 60px;
+    }
+
+    &__button {
+      align-self: center;
+    }
+
+    &__image {
+      width: 80%;
+    }
+  }
 }
 
 .button-colored {
@@ -152,7 +181,7 @@ body {
 
 .about {
   background-color: #FFFFFF;
-  height: 588px;
+  min-height: 588px;
 
   &-content {
     padding: 80px 0 100px 0;
@@ -187,6 +216,18 @@ body {
         font-size: 15px;
         line-height: 160%;
         color: #4C4C4C;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 80px 30px 100px 30px;
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 80px;
+
+      &__image {
+        width: 43%;
+        height: 100%;
       }
     }
   }
@@ -236,6 +277,10 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 90px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -372,6 +417,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
 
     &__img {
       width: 505px;
