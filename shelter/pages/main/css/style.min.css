@@ -211,10 +211,6 @@ body {
     justify-content: center;
     gap: 80px;
   }
-  .about-content__image {
-    width: 43%;
-    height: 100%;
-  }
 }
 
 .h3-title {
@@ -231,7 +227,7 @@ body {
 
 .friends {
   background: #F6F6F6;
-  height: 877px;
+  min-height: 877px;
 }
 .friends-content {
   padding: 80px 0 100px 0;
@@ -247,6 +243,11 @@ body {
 .friends-content__button {
   width: 261px;
 }
+@media screen and (max-width: 768px) {
+  .friends-content {
+    padding: 80px 30px 100px 30px;
+  }
+}
 
 .slider {
   display: flex;
@@ -260,8 +261,14 @@ body {
   gap: 90px;
 }
 @media screen and (max-width: 768px) {
+  .slider {
+    gap: 12px;
+  }
+  .slider__card:last-child {
+    display: none;
+  }
   .slider__cards {
-    flex-direction: column;
+    gap: 40px;
   }
 }
 
@@ -335,7 +342,7 @@ body {
 }
 
 .help {
-  height: 611px;
+  min-height: 611px;
   padding: 80px 0 100px 0;
   background: #FFFFFF;
 }
@@ -358,6 +365,17 @@ body {
   margin-top: 60px;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .help-content__row {
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .help {
+    padding: 80px 69px 100px 69px;
+  }
+}
 
 .help-item {
   width: -moz-max-content;
@@ -379,9 +397,14 @@ body {
   color: #545454;
   margin: 0;
 }
+@media screen and (max-width: 768px) {
+  .help-item {
+    width: 170px;
+  }
+}
 
 .in-addition {
-  height: 462px;
+  min-height: 462px;
   padding: 80px 0 100px 0;
   background: #F6F6F6;
 }
@@ -391,14 +414,15 @@ body {
   align-items: center;
   gap: 30px;
 }
-@media screen and (max-width: 768px) {
-  .in-addition-content {
-    flex-direction: column;
-  }
-}
 .in-addition-content__img {
   width: 505px;
   height: 261px;
+}
+@media screen and (max-width: 768px) {
+  .in-addition-content {
+    flex-direction: column-reverse;
+    gap: 60px;
+  }
 }
 
 .donation-block {
@@ -454,10 +478,10 @@ body {
 }
 
 .footer {
-  height: 350px;
+  min-height: 350px;
 }
 .footer-content {
-  height: 350px;
+  min-height: 350px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -467,6 +491,14 @@ body {
 }
 .footer-content__adress {
   margin-right: 9px;
+}
+@media screen and (max-width: 768px) {
+  .footer-content {
+    padding: 30px 30px 0 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 65px;
+  }
 }
 
 .info-block {

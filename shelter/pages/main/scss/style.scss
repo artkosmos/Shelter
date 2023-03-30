@@ -224,11 +224,6 @@ body {
       flex-direction: column-reverse;
       justify-content: center;
       gap: 80px;
-
-      &__image {
-        width: 43%;
-        height: 100%;
-      }
     }
   }
 }
@@ -247,7 +242,7 @@ body {
 
 .friends {
   background: #F6F6F6;
-  height: 877px;
+  min-height: 877px;
 
   &-content {
     padding: 80px 0 100px 0;
@@ -264,6 +259,10 @@ body {
     &__button {
       width: 261px;
     }
+
+    @media screen and (max-width: 768px) {
+      padding: 80px 30px 100px 30px;
+    }
   }
 }
 
@@ -277,9 +276,17 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 90px;
+  }
 
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
+  @media screen and (max-width: 768px) {
+    gap: 12px;
+
+    &__card:last-child {
+      display: none;
+    }
+
+    &__cards {
+      gap: 40px;
     }
   }
 }
@@ -360,7 +367,7 @@ body {
 }
 
 .help {
-  height: 611px;
+  min-height: 611px;
   padding: 80px 0 100px 0;
   background: #FFFFFF;
 
@@ -382,7 +389,16 @@ body {
       row-gap: 55px;
       margin-top: 60px;
       justify-content: center;
+
+      @media screen and (max-width: 768px) {
+        column-gap: 60px;
+      }
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 80px 69px 100px 69px;
+
   }
 }
 
@@ -405,10 +421,14 @@ body {
     color: #545454;
     margin: 0;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 170px;
+  }
 }
 
 .in-addition {
-  height: 462px;
+  min-height: 462px;
   padding: 80px 0 100px 0;
   background: #F6F6F6;
 
@@ -418,13 +438,14 @@ body {
     align-items: center;
     gap: 30px;
 
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-    }
-
     &__img {
       width: 505px;
       height: 261px;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: 60px;
     }
   }
 }
@@ -487,10 +508,10 @@ body {
 }
 
 .footer {
-  height: 350px;
+  min-height: 350px;
 
   &-content {
-    height: 350px;
+    min-height: 350px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -500,7 +521,14 @@ body {
     }
 
     &__adress {
-      margin-right: 9px;
+      margin-right: 9px; //pixel perfect
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 30px 30px 0 30px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      row-gap: 65px;
     }
   }
 }
