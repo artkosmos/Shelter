@@ -206,7 +206,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .about-content {
-    padding: 80px 30px 100px 30px;
+    padding: 82px 30px 100px 30px;
     flex-direction: column-reverse;
     justify-content: center;
     gap: 80px;
@@ -246,6 +246,7 @@ body {
 @media screen and (max-width: 768px) {
   .friends-content {
     padding: 80px 30px 100px 30px;
+    margin-top: 2px;
   }
 }
 
@@ -343,7 +344,7 @@ body {
 
 .help {
   min-height: 611px;
-  padding: 80px 0 100px 0;
+  padding: 79px 0 100px 0;
   background: #FFFFFF;
 }
 .help-content {
@@ -466,6 +467,7 @@ body {
 }
 .donation-link:hover {
   background: #FDDCC4;
+  transition: 400ms;
 }
 .donation-link__text {
   font-family: "Georgia";
@@ -491,6 +493,11 @@ body {
 }
 .footer-content__adress {
   margin-right: 9px;
+}
+@media screen and (max-width: 768px) {
+  .footer-content__questions {
+    margin-left: 4px;
+  }
 }
 @media screen and (max-width: 768px) {
   .footer-content {

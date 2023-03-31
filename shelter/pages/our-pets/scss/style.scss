@@ -7,7 +7,7 @@ html {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -17,6 +17,12 @@ html {
   justify-content: space-between;
   align-items: center;
   height: 60px;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    padding: 0 30px;
+    gap: 81px;
+  }
 }
 
 .title-block {
@@ -84,6 +90,10 @@ html {
       color: #545454;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
 }
 
 .h3-title {
@@ -99,28 +109,45 @@ html {
 }
 
 .our-friends {
-  height: 1342px;
+  min-height: 1342px;
   background: #F6F6F6;
+  padding: 80px 0 100px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 80px 30px 76px 30px;
+  }
 
   &-content {
-    padding: 80px 0 100px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 45px;
+    text-align: center;
 
-    &__cards {
-      height: 930px;
+    @media screen and (max-width: 768px) {
+      gap: 0px;
+    }
+
+    &__slider {
+      width: 100%;
+      min-height: 930px;
       display: flex;
       flex-wrap: wrap;
       row-gap: 30px;
       column-gap: 40px;
       align-content: center;
+
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+        margin: 30px 0 40px 0;
+      }
     }
 
-    &__title {
-      text-align: center;
+    @media screen and (max-width: 768px) {
+      &__card:nth-last-child(-n + 2) {
+        display: none;
+      }
     }
   }
 }
@@ -167,6 +194,7 @@ html {
       &:hover {
         background-color: #FDDCC4;
         cursor: pointer;
+        transition: 400ms;
       }
 
       &:active {
@@ -181,7 +209,7 @@ html {
   background-image: url("../../../assets/img/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 
   &-content {
-    height: 350px;
+    min-height: 350px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -192,6 +220,13 @@ html {
 
     &__adress {
       margin-right: 9px; // pixel perfect
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 30px 30px 0 30px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      row-gap: 65px;
     }
   }
 }

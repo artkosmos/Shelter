@@ -7,7 +7,7 @@ html {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -18,6 +18,13 @@ html {
   align-items: center;
   height: 60px;
 }
+@media screen and (max-width: 768px) {
+  .header-content {
+    justify-content: center;
+    padding: 0 30px;
+    gap: 81px;
+  }
+}
 
 .title-block {
   display: flex;
@@ -26,7 +33,6 @@ html {
   align-items: center;
   text-decoration: none;
 }
-
 .title-block__title {
   font-family: "Georgia";
   font-style: normal;
@@ -38,7 +44,6 @@ html {
   margin: 0;
   margin-bottom: 10px;
 }
-
 .title-block__subtitle {
   font-family: "Arial";
   font-style: normal;
@@ -54,7 +59,6 @@ html {
   gap: 35px;
   margin-right: 2px;
 }
-
 .menu__item {
   font-family: "Arial";
   font-style: normal;
@@ -65,7 +69,6 @@ html {
   text-decoration: none;
   border-bottom: 3px solid transparent;
 }
-
 .menu__item_active {
   margin-right: 1px;
   color: #292929;
@@ -73,17 +76,20 @@ html {
   pointer-events: none;
   cursor: default;
 }
-
 .menu__item:hover {
   cursor: pointer;
   color: #292929;
   transition: 400ms;
 }
-
 .menu__item:active {
   border-bottom: 3px solid #F1CDB3;
   transition: 150ms;
   color: #545454;
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    margin: 0;
+  }
 }
 
 .h3-title {
@@ -99,31 +105,48 @@ html {
 }
 
 .our-friends {
-  height: 1342px;
+  min-height: 1342px;
   background: #F6F6F6;
-}
-
-.our-friends-content {
   padding: 80px 0 100px 0;
+}
+@media screen and (max-width: 768px) {
+  .our-friends {
+    padding: 80px 30px 76px 30px;
+  }
+}
+.our-friends-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 45px;
+  text-align: center;
 }
-
-.our-friends-content__cards {
-  height: 930px;
+@media screen and (max-width: 768px) {
+  .our-friends-content {
+    gap: 0px;
+  }
+}
+.our-friends-content__slider {
+  width: 100%;
+  min-height: 930px;
   display: flex;
   flex-wrap: wrap;
   row-gap: 30px;
   -moz-column-gap: 40px;
-  column-gap: 40px;
+       column-gap: 40px;
   align-content: center;
 }
-
-.our-friends-content__title {
-  text-align: center;
+@media screen and (max-width: 768px) {
+  .our-friends-content__slider {
+    justify-content: center;
+    margin: 30px 0 40px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .our-friends-content__card:nth-last-child(-n+2) {
+    display: none;
+  }
 }
 
 .controlling {
@@ -132,7 +155,6 @@ html {
   align-items: center;
   gap: 20px;
 }
-
 .controlling__item {
   display: flex;
   justify-content: center;
@@ -150,27 +172,23 @@ html {
   color: #292929;
   padding-bottom: 5px;
 }
-
 .controlling__item_active {
   border: 2px solid #F1CDB3;
   background-color: #F1CDB3;
   pointer-events: none;
 }
-
 .controlling__item_inactive {
   border: 2px solid #CDCDCD;
   color: #CDCDCD;
 }
-
 .controlling__item_inactive:hover {
   cursor: not-allowed;
 }
-
 .controlling__item_next:hover {
   background-color: #FDDCC4;
   cursor: pointer;
+  transition: 400ms;
 }
-
 .controlling__item_next:active {
   background-color: #F1CDB3;
 }
@@ -178,20 +196,25 @@ html {
 .footer {
   background-image: url("../../../assets/img/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
-
 .footer-content {
-  height: 350px;
+  min-height: 350px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .footer-content__img {
   align-self: flex-end;
 }
-
 .footer-content__adress {
   margin-right: 9px;
+}
+@media screen and (max-width: 768px) {
+  .footer-content {
+    padding: 30px 30px 0 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 65px;
+  }
 }
 
 .info-block {
@@ -201,7 +224,6 @@ html {
   justify-content: space-between;
   align-items: start;
 }
-
 .info-block__title {
   color: #FFFFFF;
 }
@@ -220,7 +242,6 @@ html {
   letter-spacing: 0.06em;
   color: #F1CDB3;
 }
-
 .link-block:hover {
   color: #FFFFFF;
   transition: 400ms;
@@ -254,20 +275,17 @@ html {
   background: #FAFAFA;
   border-radius: 9px;
 }
-
 .cards-item:hover {
   cursor: pointer;
   background-color: #FFFFFF;
   transition: 400ms;
   box-shadow: 0px 0px 30px 10px rgba(34, 60, 80, 0.2);
 }
-
 .cards-item:hover .cards-item__button {
   background-color: #F1CDB3;
   transition: 400ms;
   cursor: pointer;
 }
-
 .cards-item__name {
   font-family: "Georgia";
   font-style: normal;
@@ -277,9 +295,6 @@ html {
   letter-spacing: 0.06em;
   color: #545454;
 }
-
 .cards-item__button {
   margin-top: 1px;
-}
-
-/*# sourceMappingURL=style.min.css.map */
+}/*# sourceMappingURL=style.min.css.map */
