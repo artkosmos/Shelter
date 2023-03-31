@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Arial";
+  src: url(../../../assets/fonts/arial-black.ttf) format("truetype"), url(../../../assets/fonts/Arial-Black.woff) format("woff"), url(../../../assets/fonts/Arial-Black.woff2) format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url(../../../assets/fonts/arial-regular.ttf) format("truetype"), url(../../../assets/fonts/ArialMT.woff) format("woff"), url(../../../assets/fonts/ArialMT.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url(../../../assets/fonts/arial-bold-italic.ttf) format("truetype"), url(../../../assets/fonts/Arial-BoldItalicMT.woff) format("woff"), url(../../../assets/fonts/Arial-BoldItalicMT.woff2) format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url(../../../assets/fonts/arial-bold.ttf) format("truetype"), url(../../../assets/fonts/Arial-BoldMT.woff) format("woff"), url(../../../assets/fonts/Arial-BoldMT.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url(../../../assets/fonts/arial-italic.ttf) format("truetype"), url(../../../assets/fonts/Arial-ItalicMT.woff) format("woff"), url(../../../assets/fonts/Arial-ItalicMT.woff2) format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url(../../../assets/fonts/arial-narrow-bold-italic.ttf) format("truetype"), url(../../../assets/fonts/ArialNarrow-BoldItalic.woff) format("woff"), url(../../../assets/fonts/ArialNarrow-BoldItalic.woff2) format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url(../../../assets/fonts/arial-narrow-bold.ttf) format("truetype"), url(../../../assets/fonts/ArialNarrow-Bold.woff) format("woff"), url(../../../assets/fonts/ArialNarrow-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url(../../../assets/fonts/arial-narrow-italic.ttf) format("truetype"), url(../../../assets/fonts/ArialNarrow-Italic.woff) format("woff"), url(../../../assets/fonts/ArialNarrow-Italic.woff2) format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial Narrow";
+  src: url(../../../assets/fonts/arial-narrow.ttf) format("truetype"), url(../../../assets/fonts/ArialNarrow.woff) format("woff"), url(../../../assets/fonts/ArialNarrow.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url(../../../assets/fonts/georgia-regular.ttf) format("truetype"), url(../../../assets/fonts/Georgia.woff) format("woff"), url(../../../assets/fonts/Georgia.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url(../../../assets/fonts/georgia-bold.ttf) format("truetype"), url(../../../assets/fonts/Georgia-Bold.woff) format("woff"), url(../../../assets/fonts/Georgia-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url(../../../assets/fonts/georgia-bold-italic.ttf) format("truetype"), url(../../../assets/fonts/Georgia-BoldItalic.woff) format("woff"), url(../../../assets/fonts/Georgia-BoldItalic.woff2) format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url(../../../assets/fonts/georgia-italic.ttf) format("truetype"), url(../../../assets/fonts/Georgia-Italic.woff) format("woff"), url(../../../assets/fonts/Georgia-Italic.woff2) format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}/*# sourceMappingURL=fonts.min.css.map */
