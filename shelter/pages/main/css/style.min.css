@@ -283,6 +283,7 @@ body {
 @media screen and (max-width: 320px) {
   .h3-title {
     text-align: center;
+    max-height: 64px;
   }
 }
 
@@ -440,6 +441,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 60px;
 }
 .help-content__title {
   text-align: center;
@@ -451,24 +453,37 @@ body {
   -moz-column-gap: 120px;
        column-gap: 120px;
   row-gap: 55px;
-  margin-top: 60px;
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
+  .help {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: calc(15px + 54 * (100vw - 320px) / 448);
+    padding-right: calc(15px + 54 * (100vw - 320px) / 448);
+  }
   .help-content__row {
     -moz-column-gap: 60px;
          column-gap: 60px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
   .help {
-    padding: 80px 69px 100px 69px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+  .help-content {
+    gap: 42px;
+  }
+  .help-content__row {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 30px;
+    justify-content: start;
   }
 }
 
 .help-item {
-  width: -moz-max-content;
-  width: max-content;
   height: 113px;
   display: flex;
   flex-direction: column;
@@ -488,7 +503,26 @@ body {
 }
 @media screen and (max-width: 768px) {
   .help-item {
-    width: 170px;
+    width: calc(130px + 40 * (100vw - 320px) / 448);
+    height: calc(87px + 26 * (100vw - 320px) / 448);
+  }
+}
+@media screen and (max-width: 320px) {
+  .help-item {
+    gap: 20px;
+  }
+  .help-item__title {
+    font-size: 15px;
+  }
+  .help-item__icon {
+    width: 38.461538%;
+    height: 57.471265%;
+  }
+  .help-item__icon_size1 {
+    width: 31%;
+  }
+  .help-item__icon_size2 {
+    width: 20%;
   }
 }
 
@@ -508,9 +542,30 @@ body {
   height: 261px;
 }
 @media screen and (max-width: 768px) {
+  .in-addition {
+    padding-left: calc(20px + 111.5 * (100vw - 320px) / 448);
+    padding-right: calc(20px + 111.5 * (100vw - 320px) / 448);
+  }
   .in-addition-content {
     flex-direction: column-reverse;
     gap: 60px;
+  }
+  .in-addition-content__img {
+    max-width: 100%;
+    max-height: 43.319502%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .in-addition {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+  .in-addition-content {
+    gap: 42px;
+  }
+  .in-addition-content__img {
+    width: 260px;
+    height: 135px;
   }
 }
 
@@ -545,6 +600,19 @@ body {
   background: rgba(241, 205, 179, 0.9098039216);
   border-radius: 9px;
 }
+@media screen and (max-width: 320px) {
+  .donation-block__subtitle {
+    letter-spacing: 0;
+    line-height: 160%;
+    text-align: center;
+  }
+  .donation-block__link {
+    width: calc(281px + 68 * (100vw - 320px) / 448);
+  }
+  .donation-block__description {
+    text-align: justify;
+  }
+}
 
 .donation-link {
   display: flex;
@@ -566,6 +634,11 @@ body {
   letter-spacing: 0.06em;
   color: #545454;
 }
+@media screen and (max-width: 320px) {
+  .donation-link__text {
+    font-size: calc(15px + 5 * (100vw - 320px) / 448);
+  }
+}
 
 .footer {
   min-height: 350px;
@@ -580,24 +653,58 @@ body {
   align-self: flex-end;
 }
 .footer-content__adress {
-  margin-right: 9px;
+  margin-right: 22px;
 }
 @media screen and (max-width: 768px) {
-  .footer-content__questions {
-    margin-left: 4px;
+  .footer {
+    padding-top: 30px;
+    padding-left: calc(10px + 20 * (100vw - 320px) / 448);
+    padding-right: calc(10px + 20 * (100vw - 320px) / 448);
+  }
+  .footer-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 65px;
+    -moz-column-gap: 37px;
+         column-gap: 37px;
+  }
+  .footer-content__adress {
+    margin: 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
   .footer-content {
-    padding: 30px 30px 0 30px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    row-gap: 65px;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 42px;
+  }
+  .footer-content__questions {
+    margin: 0;
+  }
+  .footer-content__adress .info-block__location {
+    align-self: flex-start;
+  }
+  .footer-content .info-block {
+    width: 100%;
+    align-items: center;
+    height: auto;
+    gap: 41.5px;
+  }
+  .footer-content .info-block__title {
+    max-width: 278px;
+  }
+  .footer-content__img {
+    width: 86.666667%;
+    /* 260px/300px */
+    height: 86.774194%;
+    /* 269px/310px */
+    align-self: center;
   }
 }
 
 .info-block {
   height: 234px;
+  max-width: 302px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
