@@ -402,10 +402,6 @@ body {
   @media screen and (max-width: 768px) {
     gap: 12px;
 
-    &__card:last-child {
-      display: none;
-    }
-
     &__cards {
       gap: 40px;
     }

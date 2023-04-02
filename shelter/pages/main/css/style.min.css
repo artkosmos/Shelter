@@ -387,9 +387,6 @@ body {
   .slider {
     gap: 12px;
   }
-  .slider__card:last-child {
-    display: none;
-  }
   .slider__cards {
     gap: 40px;
   }
