@@ -274,8 +274,8 @@ html {
     }
   }
 
-  @media screen and (max-width: 320px) {
-    gap: 10px;
+  @media screen and (max-width: 768px) {
+    gap: calc(10px + (20 - 10) * ((100vw - 320px) / (768 - 320)));
   }
 }
 
