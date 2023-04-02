@@ -258,9 +258,9 @@ html {
 .controlling__item_next:active {
   background-color: #F1CDB3;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
   .controlling {
-    gap: 10px;
+    gap: calc(10px + 10 * (100vw - 320px) / 448);
   }
 }
 
