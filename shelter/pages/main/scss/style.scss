@@ -6,7 +6,13 @@ html {
   scroll-behavior: smooth;
 }
 
+.lock-scroll {
+  overflow: hidden;
+}
+
 body {
+  position: relative;
+  z-index: 2;
   background-image: url("../../../assets/img/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
 
@@ -16,6 +22,8 @@ body {
 }
 
 .header {
+  padding-top: 30px;
+
   @media screen and (min-width: 769px) and (max-width: 1280px) {
     padding-left: 40px;
     padding-right: 40px;
@@ -23,7 +31,6 @@ body {
 }
 
 .header-content {
-  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +54,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: all 1s;
+  transition: all 800ms;
 
   &__stripe {
     width: 100%;
@@ -58,13 +65,13 @@ body {
 
   &_active {
     transform: rotate(-90deg);
-    transition: all 1s;
+    transition: all 800ms;
   }
 
   @media screen and (max-width: 767px) {
     display: flex;
     position: relative;
-    z-index: 2;
+    z-index: 5;
   }
 }
 
@@ -148,16 +155,21 @@ body {
     width: 320px;
     height: 100vh;
     background: #292929;
-    transition: right 800ms;
+    transition: right 900ms;
     overflow: auto; // possibility to scroll
+    z-index: 4;
 
     &__item {
       font-size: 32px;
+
+      &_active {
+        pointer-events: auto;
+      }
     }
 
     &_active {
       right: 0;
-      transition: right 800ms;
+      transition: right ease-out 500ms;
     }
   }
 }
@@ -919,5 +931,23 @@ body {
   &:hover {
     color: #FFFFFF;
     transition: 400ms;
+  }
+}
+
+.overlay {
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: opacity 700ms;
+
+  &_active {
+    opacity: 0.6;
+    transition: opacity 800ms;
+    z-index: 3;
   }
 }
