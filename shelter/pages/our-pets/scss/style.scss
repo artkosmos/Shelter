@@ -516,6 +516,7 @@ body {
 }
 
 .overlay {
+  visibility: hidden;
   opacity: 0;
   position: absolute;
   z-index: 1;
@@ -527,6 +528,7 @@ body {
   transition: opacity 700ms;
 
   &_active {
+    visibility: visible;
     opacity: 0.6;
     transition: opacity 800ms;
     z-index: 3;
