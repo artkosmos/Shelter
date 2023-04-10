@@ -6,14 +6,14 @@ console.log(initialPets)
 
 // BURGER MENU---------------------------------------------------
 const burgerButton = document.querySelector('.burger')
-const navHeader = document.querySelector('.menu')
+const navMenu = document.querySelector('.mobile-menu')
 const notScroll = document.getElementById('html')
 const overLay = document.querySelector('.overlay')
-const menuLinkItem = document.querySelectorAll('.menu__item')
+const menuLinkItem = document.querySelectorAll('.mobile-menu__item')
 
 function menuBurgerActivityHandler() {
   burgerButton.classList.toggle('burger_active')
-  navHeader.classList.toggle('menu_active')
+  navMenu.classList.toggle('mobile-menu_active')
   notScroll.classList.toggle('lock-scroll')
   overLay.classList.toggle('overlay_active')
 }
@@ -23,13 +23,12 @@ burgerButton.addEventListener('click', (event) => {
   menuBurgerActivityHandler()
 })
 
-if (window.screen.width < 768) {
-  menuLinkItem.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      menuBurgerActivityHandler()
-    })
+//close burger menu when click on link
+menuLinkItem.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    menuBurgerActivityHandler()
   })
-}
+})
 
 //close burger menu when click outside
 overLay.addEventListener('click', (event) => {
