@@ -4,6 +4,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
 }
 
 .lock-scroll {
@@ -12,7 +14,7 @@ html {
 
 body {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   background-image: url("../../../assets/img/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
 
@@ -935,21 +937,207 @@ body {
 }
 
 .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  z-index: 1;
   background-color: rgb(0, 0, 0);
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  transition: opacity 700ms;
+  z-index: 2;
+  transition: all 800ms;
 
   &_active {
     visibility: visible;
-    opacity: 0.6;
-    transition: opacity 800ms;
-    z-index: 3;
+    opacity: 0.5;
+  }
+}
+
+.pop-up {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: all 500ms;
+
+  &_visibility {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__content {
+    position: relative;
+    width: 900px;
+    height: 500px;
+    background: #FAFAFA;
+    border-radius: 9px;
+  }
+
+  &__close {
+    background: url('../../../assets/icons/modal_window_cross.png') center no-repeat;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    position: absolute;
+    top: -56px;
+    right: -43px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    &__content {
+      width: calc(630px + (900 - 630) * ((100vw - 768px) / (1280 - 768)));
+      height: calc(380px + (500 - 380) * ((100vw - 768px) / (1280 - 768)));
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__content {
+      width: calc(240px + (630 - 240) * ((100vw - 320px) / (768 - 320)));
+      height: calc(370px + (380 - 370) * ((100vw - 320px) / (768 - 320)));
+    }
+
+    &__close {
+      right: calc(-1 * (30px + (43 - 30) * ((100vw - 320px) / (768 - 320))));
+    }
+  }
+}
+
+.popup-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+    padding: 50px 20px 88px 29px;
+  }
+
+  &__titleblock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000000;
+  }
+
+  &__subtitle {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #000000;
+  }
+
+  &__description {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+  }
+
+  &__image {
+    width: 60%;
+    height: 100%;
+    border-radius: 9px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    &__description {
+      font-size: calc(13px + (15 - 13) * ((100vw - 768px) / (1280 - 768)));
+    }
+
+    &__info {
+      gap: calc(20px + (40 - 20) * ((100vw - 768px) / (1280 - 768)));
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    &__info {
+      padding: 10px 9px 30px 11px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__info {
+      padding-bottom: calc(10px + (30 - 10) * ((100vw - 320px) / (760 - 320)));
+      gap: 20px;
+    }
+
+    &__description {
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    &__image {
+      display: none;
+    }
+  }
+}
+
+.list {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  padding-left: 15px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  li {
+    color: #F1CDB3;
+  }
+
+  .list__item {
+    font-weight: 700;
+    color: #000000;
+  }
+
+  .list__text {
+    font-weight: 400;
+    color: #000000;
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 5px;
   }
 }
